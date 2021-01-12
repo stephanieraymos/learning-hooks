@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const UseStateBasics = () => {
 
-  const [text, setText] = useState('random title') //second value is function, useState perameter is default value of text.
+  const [text, setText] = useState('random title') //second value is function, useState perameter is default value of text. [Default value, function that controls that value.]
 
   const handleClick = () => {
     if(text === 'random title') {
