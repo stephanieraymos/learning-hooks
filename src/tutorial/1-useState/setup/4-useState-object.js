@@ -5,12 +5,23 @@ const UseStateObject = () => {
     name: 'stephanie', 
     age: 28, 
     message: 'Random message'
-  })
+  });
+
+  const changeMessage = () => {
+    setPerson({
+      message: 'New Message',
+      name: 'Audie',
+      age: 26
+  });
+  }
   return(
     <>
       <h1>Hello, {person.name}!</h1>
       <h1>You are {person.age} years old.</h1>
       <h1>{person.message}</h1>
+      <button className='btn' onClick={changeMessage}>
+        Change Message
+      </button>
     </>
   )
 };
