@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 
 const UseStateObject = () => {
-  return <h2>useState object example</h2>;
+  const [person, setPerson] = useState({
+    name: 'stephanie', 
+    age: 28, 
+    message: 'Random message'
+  })
+  return(
+    <>
+      <h1>Hello, {person.name}</h1>
+    </>
+  )
 };
 
 export default UseStateObject;
