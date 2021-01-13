@@ -10,7 +10,7 @@ const UseStateObject = () => {
   const changeMessage = () => {
     setPerson({
       ...person,
-      message: 'New Message'
+      message: 'Change message only, keep the name and age the same'
   });
   }
   return(
