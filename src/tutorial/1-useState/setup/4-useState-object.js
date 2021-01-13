@@ -13,12 +13,17 @@ const UseStateObject = () => {
   const [age, setAge] = useState(28)
   const [message, setMessage] = useState('Message')
 
-  // BUTTON FUNCTION
+  // BUTTON FUNCTION FOR OBJECT
+  // const changeMessage = () => {
+  //   setPerson({
+  //     ...person,
+  //     message: 'Change message only, keep the name and age the same'
+  // });
+  // }
+
+  // BUTTON FUNCTION FOR NON OBJECT
   const changeMessage = () => {
-    setPerson({
-      ...person,
-      message: 'Change message only, keep the name and age the same'
-  });
+    setMessage('New message')
   }
   return(
     <>
