@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 
 const UseStateCounter = () => {
-  return <h2>useState counter example</h2>;
+  return(
+    <>
+    <section style={{margin: '4rem 0'}}>
+      <h2>Regular Counter</h2>
+    </section>
+    </>
+  )
 };
 
 export default UseStateCounter;
