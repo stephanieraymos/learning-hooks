@@ -7,9 +7,18 @@ const UseStateCounter = () => {
     setValue(0)
   }
 
+  const complexIncrease = () => {
+    setTimeout(() => {
+      // setValue(value + 1)
+      setValue((prevState) => {
+        return prevState + 1;
+      })
+    }, 2000); //2 seconds
+  }
+
   return(
     <>
-    
+
     <section style={{margin: '4rem 0'}}>
       <h2>Regular Counter</h2>
       <h1>{value}</h1>
