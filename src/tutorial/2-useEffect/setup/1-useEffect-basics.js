@@ -11,7 +11,8 @@ const UseEffectBasics = () => {
     if(value >= 1) {
     document.title = `New Messages(${value})`
     }
-  }, [])
+  }, [value]) //Adding value as a dependency will cause useEffect to rerender ONLY when "value" is changed. If array is left blank, useEffect will only run on the initial render and will not rerender.
+
   console.log('render component')
 
   return (
