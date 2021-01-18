@@ -12,9 +12,15 @@ const UseEffectCleanup = () => {
   }
 
   useEffect(() => {
+    console.log('useEffect')
     window.addEventListener('resize', checkSize)
-  })
-
+    return () => {
+      //Whatever is in here will be invokes once we exit
+      console.log('clean up')
+      window.removeEventListener('resize', checkSize)
+    }
+  });
+  console.log('render')
   return(
     <>
     <h1>Window</h1>
