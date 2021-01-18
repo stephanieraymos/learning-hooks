@@ -15,7 +15,8 @@ const UseEffectCleanup = () => {
     console.log('useEffect')
     window.addEventListener('resize', checkSize)
     return () => {
-      //Whatever is in here will be invokes once we exit
+      //Whatever is in here will be invokes once we exit. Clean up function is very important when setting up side effects to avoid issues. In cases where the component will always be visible on the screen it is ok to use the empty array as second argument as seen below.
+      
       console.log('clean up')
       window.removeEventListener('resize', checkSize)
     }
