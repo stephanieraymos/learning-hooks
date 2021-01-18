@@ -15,7 +15,7 @@ const UseEffectBasics = () => {
 
   useEffect(() => {
     console.log('Hello')
-  }, [])
+  }, []) //Can have as many useEffects as needed. 
 
   console.log('render component')
 
