@@ -13,6 +13,10 @@ const UseEffectBasics = () => {
     }
   }, [value]) //Adding value as a dependency will cause useEffect to rerender ONLY when "value" is changed. If array is left blank, useEffect will only run on the initial render and will not rerender.
 
+  useEffect(() => {
+    console.log('Hello')
+  }, [])
+
   console.log('render component')
 
   return (
