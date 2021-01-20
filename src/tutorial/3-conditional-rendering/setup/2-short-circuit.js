@@ -8,7 +8,8 @@ const ShortCircuit = () => {
   const secondValue = text && 'hello world';
 
   return <>
-
+  <h1>{firstValue}</h1>
+  <h1>{secondValue}</h1>
   </>;
 };
 
