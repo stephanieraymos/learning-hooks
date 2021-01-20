@@ -15,6 +15,7 @@ const ShortCircuit = () => {
   {/* || is saying "is that <-- false, okay then do this -->"
   && is saying "is that <-- true, okay then do this -->" */}
   <button className="btn" onClick={() => setIsError(!isError)}>toggle error</button>
+  {/* !isError is the opposite of isError, so every time it is clicked it is setting isError to the opposite of what it currently is; toggle. */}
   {isError && <h1>Error...</h1>}
   </>;
 };
