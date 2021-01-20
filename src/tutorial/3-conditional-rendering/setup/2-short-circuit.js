@@ -9,8 +9,7 @@ const ShortCircuit = () => {
   const secondValue = text && 'hello world'; //If first value (text) is true; then it returns the second value (hellow world), if false then it returns the first value of string; empty string.
 
   return <>
-  <h1>{firstValue}</h1>
-  <h1>{secondValue}</h1>
+  <h1>{text || 'john doe'}</h1>
   </>;
 };
 
