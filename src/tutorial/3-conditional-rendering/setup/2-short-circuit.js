@@ -13,6 +13,8 @@ const ShortCircuit = () => {
   {/* || is saying "is that <-- false, okay then do this -->"
   && is saying "is that <-- true, okay then do this -->" */}
   {text && <h1>hello world</h1>}
+  {!text && <h1>hello world</h1>}
+  {/* ^This is the same as the first h1 */}
   </>;
 };
 
