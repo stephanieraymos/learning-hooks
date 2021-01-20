@@ -15,7 +15,7 @@ const UseEffectFetchData = () => {
   //USE EFFECT CAN'T BE ASYNC: IT CAN'T RETURN A PROMISE,and async returns a promise. This is why I created a seperate fetch function above to call inside of useEffect; so that it could be async.
   // This function could have been set up INSIDE useEffect, or as a serpate function as I have done.
   useEffect(() => {
-    
+    getUsers();
   })
   return (
     <>
