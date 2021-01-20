@@ -10,6 +10,9 @@ const ShortCircuit = () => {
 
   return <>
   <h1>{text || 'john doe'}</h1>
+  {/* || is saying "is that <-- false, okay then do this -->"
+  && is saying "is that <-- true, okay then do this -->" */}
+  {text && <h1>hello world</h1>}
   </>;
 };
 
