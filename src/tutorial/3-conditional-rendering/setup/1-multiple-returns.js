@@ -8,7 +8,11 @@ const MultipleReturns = () => {
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then((user) => console.log(user))
+      .then((user) => {
+        const {login} = user;
+        setUser(login)
+        setIsLoading(false) //Now that I have user it's no longer loading
+      })
       .catch((error) => console.log(error));
   }, []);
 
