@@ -17,6 +17,10 @@ const Item = () => {
 
   useEffect(() => {
     window.addEventListener('resize', checkSize)
+    return () => {
+      //This function is run once the component is removed from the dom
+      window.removeEventListener('resize', checkSize)
+    }
   }, [])
 
   return (
