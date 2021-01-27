@@ -23,13 +23,13 @@ const ControlledInputs = () => {
             <label htmlFor="firstName">
               Name: 
             </label>
-            <input type="text" id="firstName" name="firstName" />
+            <input type="text" id="firstName" name="firstName" value={firstName}/>
           </div>
           <div className="form-control">
             <label htmlFor="email">
               Email: 
             </label>
-            <input type="text" id="email" name="email" />
+            <input type="text" id="email" name="email" value={email}/>
           </div>
           <button type="submit">Add person</button>
         </form>
