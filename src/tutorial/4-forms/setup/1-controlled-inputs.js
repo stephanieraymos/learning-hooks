@@ -12,7 +12,7 @@ const ControlledInputs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('yooooo')
+    console.log(firstName, email)
   };
 
   return (
