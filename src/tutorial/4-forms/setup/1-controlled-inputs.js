@@ -14,8 +14,10 @@ const ControlledInputs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if(firstName && email) {
-      const person = {firstName, email}
-      console.log(person)
+      const person = {firstName, email} //Shortened from firstName: firstName, email: email
+      setPeople((people) => {
+        return [...people, person]
+      });
     } else {
       console.log('Empty values')
     }
