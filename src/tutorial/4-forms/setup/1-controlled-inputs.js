@@ -14,8 +14,8 @@ const ControlledInputs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if(firstName && email) {
-      
-      console.log('Submit the form')
+      const person = {firstName, email}
+      console.log(person)
     } else {
       console.log('Empty values')
     }
