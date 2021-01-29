@@ -12,6 +12,9 @@ const ControlledInputs = () => {
   const [people, setPeople] = useState([]);
 
   const handleChange = (e) => {
+    const name = e.target.name
+    const value = e.target.value
+    console.log(name, value)
   }
 
   const handleSubmit = (e) => {
