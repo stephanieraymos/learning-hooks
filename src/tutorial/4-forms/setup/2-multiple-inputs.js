@@ -21,18 +21,8 @@ const ControlledInputs = () => {
               type='text'
               id='firstName'
               name='firstName'
-              value={firstName}
+              value={person.firstName}
               onChange={(e) => setFirstName(e.target.value)}
-            />
-          </div>
-          <div className='form-control'>
-            <label htmlFor='age'>Age : </label>
-            <input
-              type='text'
-              id='age'
-              name='age'
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
             />
           </div>
           <div className='form-control'>
@@ -41,8 +31,18 @@ const ControlledInputs = () => {
               type='email'
               id='email'
               name='email'
-              value={email}
+              value={person.email}
               onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className='form-control'>
+            <label htmlFor='age'>Age : </label>
+            <input
+              type='text'
+              id='age'
+              name='age'
+              value={person.age}
+              onChange={(e) => setAge(e.target.value)}
             />
           </div>
           <button type='submit'>add person</button>
