@@ -11,10 +11,17 @@ const ControlledInputs = () => {
   const [person, setPerson] = useState({firstName:'', email:'', age:''})
   const [people, setPeople] = useState([]);
 
+  const handleChange = (e) => {
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <>
       <article>
-        <form className='form' onSubmit={handleSubmit}>
+        <form className='form'>
           <div className='form-control'>
             <label htmlFor='firstName'>Name : </label>
             <input
@@ -22,7 +29,7 @@ const ControlledInputs = () => {
               id='firstName'
               name='firstName'
               value={person.firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={handleChange}
             />
           </div>
           <div className='form-control'>
@@ -32,7 +39,7 @@ const ControlledInputs = () => {
               id='email'
               name='email'
               value={person.email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleChange}
             />
           </div>
           <div className='form-control'>
@@ -42,10 +49,10 @@ const ControlledInputs = () => {
               id='age'
               name='age'
               value={person.age}
-              onChange={(e) => setAge(e.target.value)}
+              onChange={handleChange}
             />
           </div>
-          <button type='submit'>add person</button>
+          <button type='submit' onClick={handleSubmit}>add person</button>
         </form>
         {people.map((person, index) => {
           const { id, firstName, email } = person;
