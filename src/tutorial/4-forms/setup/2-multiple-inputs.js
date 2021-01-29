@@ -14,11 +14,11 @@ const ControlledInputs = () => {
     const name = e.target.name;
     const value = e.target.value;
     setPerson({ ...person, [name]: value });
-    console.log(name, value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(person)
   };
 
   return (
