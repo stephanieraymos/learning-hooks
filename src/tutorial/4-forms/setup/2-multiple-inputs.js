@@ -10,6 +10,7 @@ const ControlledInputs = () => {
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [people, setPeople] = useState([]);
+  const [age, setAge] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,6 +38,16 @@ const ControlledInputs = () => {
               name='firstName'
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+            />
+          </div>
+          <div className='form-control'>
+            <label htmlFor='age'>Age : </label>
+            <input
+              type='text'
+              id='age'
+              name='age'
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
             />
           </div>
           <div className='form-control'>
