@@ -1,11 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 // preserves value
 // DOES NOT trigger re-render
 // target DOM nodes/elements
 
 const UseRefBasics = () => {
-  return <h2>useRef</h2>;
+  return (
+    <>
+      <form className="form">
+        <div>
+          <input type="text"/>
+          <button type="button">Submit</button>
+        </div>
+      </form>
+    </>
+  );
 };
 
 export default UseRefBasics;
