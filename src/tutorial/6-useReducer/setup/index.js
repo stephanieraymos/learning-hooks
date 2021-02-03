@@ -16,10 +16,11 @@ const Index = () => {
     <>
       {/* Show Modal component when showModal is true */}
       {showModal && <Modal />}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <div>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
         </div>
+        <button type="submit">Add person</button>
       </form>
     </>
   );
