@@ -22,13 +22,18 @@ const Index = () => {
   return (
     <>
       {/* Show Modal component when showModal is true */}
-      {showModal && <Modal />}
+      {setShowModal && <Modal />}
       <form onSubmit={handleSubmit} className="form">
         <div>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
         </div>
         <button type="submit">Add person</button>
       </form>
+      {people.map((person) => {
+        return <div key={person.id}>
+          <h4>{person.name}</h4>
+        </div>
+      })}
     </>
   );
 };
