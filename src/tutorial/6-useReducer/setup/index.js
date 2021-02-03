@@ -14,7 +14,7 @@ const Index = () => {
       {showModal && <Modal />}
       <form onSubmit={handleSubmit}>
         <div>
-          <input type="text" value={name} onChange={() => setName(e.target.value)}/>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
         </div>
       </form>
     </>
