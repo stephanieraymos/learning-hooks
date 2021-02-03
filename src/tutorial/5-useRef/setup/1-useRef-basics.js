@@ -12,13 +12,13 @@ const UseRefBasics = () => {
     e.preventDefault();
     console.log(refContainer.current.value);
     console.log(divContainer.current);
-
   };
 
   useEffect(() => {
     console.log(refContainer.current);
     refContainer.current.focus();
-  })
+  }); //useRef doesn't trigger re-render; so no need for empty array as second argument
+
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
