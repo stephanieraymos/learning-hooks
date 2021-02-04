@@ -8,9 +8,9 @@ const reducer = (state, action) => {
 }
 
 const defaultState = {
-  people: data,
-  showModal: true,
-  modalContent: 'Modal Content Default Text'
+  people: [],
+  showModal: false,
+  modalContent: ''
 }
 
 const Index = () => {
