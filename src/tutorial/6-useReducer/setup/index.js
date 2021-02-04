@@ -20,18 +20,15 @@ const Index = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
-      setShowModal(true);
-      setPeople([...people, { id: new Date().getTime().toString(), name }]);
-      setName("");
+     
     } else {
-      setShowModal(true);
     }
   };
 
   return (
     <>
       {/* Show Modal component when showModal is true */}
-      {setShowModal && <Modal />}
+      {state.showModal && <Modal />}
       <form onSubmit={handleSubmit} className="form">
         <div>
           <input
