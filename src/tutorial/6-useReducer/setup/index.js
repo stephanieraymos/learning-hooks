@@ -5,9 +5,8 @@ import { data } from "../../../data";
 
 const Index = () => {
   const [name, setName] = useState("");
-  const [people, setPeople] = useState(data);
-  const [showModal, setShowModal] = useState(false);
-
+  const [state, dispatch] = useReducer(reducer)
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
