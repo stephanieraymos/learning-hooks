@@ -7,6 +7,12 @@ const reducer = (state, action) => {
 
 }
 
+const defaultState = {
+  people: [],
+  showModal: false,
+  modalContent: 'Modal Content Default Text'
+}
+
 const Index = () => {
   const [name, setName] = useState("");
   const [state, dispatch] = useReducer(reducer)
