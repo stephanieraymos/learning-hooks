@@ -8,8 +8,8 @@ const reducer = (state, action) => {
 }
 
 const defaultState = {
-  people: [],
-  showModal: false,
+  people: data,
+  showModal: true,
   modalContent: 'Modal Content Default Text'
 }
 
