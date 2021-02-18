@@ -6,8 +6,8 @@ import { data } from "../../../data";
 const reducer = (state, action) => {
   console.log(state);
   if(action.type === 'ADD_ITEM') {
-    const newItems = [...state.people, action.payload]
-    return {...state, people:'', isModalOpen:true, modalContent: "Item added"}
+    const newPeople = [...state.people, action.payload]
+    return {...state, people:newPeople, isModalOpen:true, modalContent: "Item added"}
   }
   throw new Error ("No matching action type.")
 }
