@@ -4,7 +4,9 @@ import { data } from "../../../data";
 // reducer function
 
 const reducer = (state, action) => {
-  console.log(state, action);
+  if(action.type === 'TESTING') {
+    return {...state, people:data, isModalOpen:true, modalContent: "Item added"}
+  }
   return state; //Always return state in reducer or app will not work
 }
 
