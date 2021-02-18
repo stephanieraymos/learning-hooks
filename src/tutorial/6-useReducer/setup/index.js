@@ -6,6 +6,7 @@ import { data } from "../../../data";
 const reducer = (state, action) => {
   console.log(state);
   if(action.type === 'ADD_ITEM') {
+    const newItems = {...state.items, action.payload}
     return {...state, people:'', isModalOpen:true, modalContent: "Item added"}
   }
   throw new Error ("No matching action type.")
@@ -24,7 +25,7 @@ const Index = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
-      const newItem = {id:newDate().getTime().toString(), name}
+      const newItem = {id:new Date().getTime().toString(), name}
      dispatch({type: 'ADD_ITEM', payload: newItem})
     } else {
       dispatch({type:'RANDOM'})
