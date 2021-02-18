@@ -4,7 +4,8 @@ import { data } from "../../../data";
 // reducer function
 
 const reducer = (state, action) => {
-
+  console.log(state, action);
+  return state; //Always return state in reducer or app will not work
 }
 
 const defaultState = {
