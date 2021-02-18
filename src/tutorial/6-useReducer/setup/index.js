@@ -10,7 +10,7 @@ const reducer = (state, action) => {
     return {
       ...state,
       people: newPeople,
-      isModalOpen: true,
+      showModal: true,
       modalContent: "Item added",
     };
   }
