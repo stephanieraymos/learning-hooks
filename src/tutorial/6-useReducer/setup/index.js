@@ -8,7 +8,7 @@ const reducer = (state, action) => {
   if(action.type === 'TESTING') {
     return {...state, people:data, isModalOpen:true, modalContent: "Item added"}
   }
-  return state; //Always return state in reducer or app will not work
+  throw new Error ("No matching action type.")
 }
 
 const defaultState = {
@@ -26,6 +26,7 @@ const Index = () => {
     if (name) {
      dispatch({type: 'TESTING'})
     } else {
+      dispatch({type:'RANDOM'})
     }
   };
 
