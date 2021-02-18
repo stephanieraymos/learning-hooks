@@ -5,31 +5,43 @@ import { data } from "../../../data";
 
 const reducer = (state, action) => {
   console.log(state);
-  if(action.type === 'ADD_ITEM') {
-    const newPeople = [...state.people, action.payload]
-    return {...state, people:newPeople, isModalOpen:true, modalContent: "Item added"}
+  if (action.type === "ADD_ITEM") {
+    const newPeople = [...state.people, action.payload];
+    return {
+      ...state,
+      people: newPeople,
+      isModalOpen: true,
+      modalContent: "Item added",
+    };
   }
-  throw new Error ("No matching action type.")
-}
+  if (action.type === "NO_VALUE") {
+    return {
+      ...state,
+      showModal: true,
+      modalContent: "Please enter a value",
+    };
+  }
+  throw new Error("No matching action type.");
+};
 
 const defaultState = {
   people: [],
   showModal: false,
-  modalContent: ''
-}
+  modalContent: "",
+};
 
 const Index = () => {
   const [name, setName] = useState("");
-  const [state, dispatch] = useReducer(reducer, defaultState)
+  const [state, dispatch] = useReducer(reducer, defaultState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
-      const newItem = {id:new Date().getTime().toString(), name}
-     dispatch({type: 'ADD_ITEM', payload: newItem})
-     setName('')
+      const newItem = { id: new Date().getTime().toString(), name };
+      dispatch({ type: "ADD_ITEM", payload: newItem });
+      setName("");
     } else {
-      dispatch({type:'RANDOM'})
+      dispatch({ type: "NO_VALUE" });
     }
   };
 
