@@ -26,6 +26,15 @@ const reducer = (state, action) => {
       showModal: false,
     }
   }
+  if(action.type === 'REMOVE_ITEM') {
+    const newPeople = state.people.filter((person) => person.id !== action.payload)
+
+    return{
+      ...state,
+      people: newPeople
+      
+    }
+  }
 
   throw new Error("No matching action type.");
 };
@@ -73,7 +82,7 @@ const Index = () => {
         return (
           <div key={person.id} className="item">
             <h4>{person.name}</h4>
-            <button onClick={() => dispatch({type:'REMOVE_ITEM', payload: person.id})}></button>
+            <button onClick={() => dispatch({type:'REMOVE_ITEM', payload: person.id})}>Remove</button>
           </div>
         );
       })}
