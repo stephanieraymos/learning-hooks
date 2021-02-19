@@ -4,7 +4,6 @@ import { data } from "../../../data";
 // reducer function
 
 const reducer = (state, action) => {
-  console.log(state);
   if (action.type === "ADD_ITEM") {
     const newPeople = [...state.people, action.payload];
     return {
@@ -44,6 +43,10 @@ const Index = () => {
       dispatch({ type: "NO_VALUE" });
     }
   };
+
+  const closeModal = () => {
+    dispatch({type:'CLOSE_MODAL'})
+  }
 
   return (
     <>
