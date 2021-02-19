@@ -58,7 +58,7 @@ const Index = () => {
   return (
     <>
       {/* Show Modal component when showModal is true */}
-      {state.showModal && <Modal modalContent={state.modalContent} />}
+      {state.showModal && <Modal closeModal={closeModal} modalContent={state.modalContent} />}
       <form onSubmit={handleSubmit} className="form">
         <div>
           <input
