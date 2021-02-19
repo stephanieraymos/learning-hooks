@@ -20,6 +20,13 @@ const reducer = (state, action) => {
       modalContent: "Please enter a value",
     };
   }
+  if(action.type === 'CLOSE_MODAL') {
+    return {
+      ...state,
+      showModal: false,
+    }
+  }
+
   throw new Error("No matching action type.");
 };
 
