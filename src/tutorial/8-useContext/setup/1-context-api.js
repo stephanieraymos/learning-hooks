@@ -1,7 +1,13 @@
-import React, { useState, useContext } from 'react';
-import { data } from '../../../data';
+import React, { useState, useContext } from "react";
+import { data } from "../../../data";
 // more components
 // fix - context api, redux (for more complex cases)
+
+const PersonContext = React.createContext();
+// Two components - Provider, Consumer
+// Don't have to use the Consumer
+// Provider works as distributor & wraps around whole component tree/whole application.
+// ContextAPI is root component
 
 const ContextAPI = () => {
   const [people, setPeople] = useState(data);
@@ -11,10 +17,10 @@ const ContextAPI = () => {
     });
   };
   return (
-    <>
+    <PersonContext.Provider value="Hello">
       <h3>prop drilling</h3>
       <List people={people} removePerson={removePerson} />
-    </>
+    </PersonContext.Provider>
   );
 };
 
@@ -35,8 +41,10 @@ const List = ({ people, removePerson }) => {
 };
 
 const SinglePerson = ({ id, name, removePerson }) => {
+  const data = useContext(PersonContext);
+  
   return (
-    <div className='item'>
+    <div className="item">
       <h4>{name}</h4>
       <button onClick={() => removePerson(id)}>remove</button>
     </div>
